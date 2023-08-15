@@ -1,5 +1,5 @@
 # ---- Base Node ----
-FROM node:10.18.1 AS base
+FROM node:18-alpine as development
 WORKDIR /app
 
 # ---- Dependencies ----
@@ -14,7 +14,7 @@ COPY . /app
 RUN yarn build
 
 # --- Release ----
-FROM node:10.18.1 AS release
+FROM node:18-alpine as development
 WORKDIR /app
 COPY --from=dependencies /app/package.json ./
 # 安装 app 依赖
