@@ -5,8 +5,7 @@
         <el-card style="margin-top:20px;max-width:800px;margin:auto;opacity:0.8;blackground-color:#0F4677;border-radius: 20px;">
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="lock" style="margin-left: 20px" title="完整魔改版:v1.4"/>
-            つつの订阅转换
-            <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
+            Sayuri订阅转换
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%;">
@@ -254,30 +253,20 @@ export default {
           "自动判断客户端": "auto",
         },
         customBackend: {
-          "つつの专属后端 (六核负载均衡-支持IPv4/IPv6)": "https://api.tsutsu.one/sub?",
+          "Sayuri-Render后端": "https://sub.sayuri.cf/sub?",
         },
         backendOptions: [
-          { value: "https://api.tsutsu.one/sub?" },
+          { value: "https://sub.sayuri.cf/sub?" },
         ],
         remoteConfig: [
           {
-            label: "つつの专属规则",
+            label: "Yuki专属规则",
             options: [
               {
-                label: "つつ-全分组",
+                label: "Yuki自用Apple直连",
                 value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full.ini"
-              },
-              {
-                label: "つつ-全分组-地区自动选择",
-                value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full-urltest.ini"
-              },
-              {
-                label: "つつ-超jb精简分组-含国内分流",
-                value:
-                  "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-mini-gfw.ini"
-              },
+                  "https://raw.githubusercontent.com/godlikeanyone/Rules/master/subconvert.ini"
+              }
             ]
           },
 	{
@@ -298,121 +287,6 @@ export default {
                 value:
                   "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-maoport-full.ini"
               },
-            ]
-          },
-          {
-            label: "用户投稿,投稿请tg找 @Ox208",
-            options: [
-              {
-                label: "hope140自用配置 (与Github同步)",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/hope140.yaml"
-              },
-              {
-                label: "hope140去广告配置",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/Adblock.yaml"
-              },
-              {
-                label: "hope140全分组",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/All.yaml"
-              },
-              {
-                label: "Yuki隐藏国内IP属地-极简",
-                value:
-                  "https://raw.githubusercontent.com/godlikeanyone/Rules/master/subconvert.ini"
-              },
-              {
-                label: "AllenXu精简版多国家",
-                value:
-                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/cdn_multicountry.ini"
-              },
-              {
-                label: "AllenXu小机场专用",
-                value:
-                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/smallairport.ini"
-              },
-              {
-                label: "酷酷规则",
-                value:
-                  "https://raw.githubusercontent.com/xiaoshenxian233/cool/rule/coolcool.ini"
-              },
-              {
-                label: "NormalPeople 规则集 (仅P核)",
-                value:
-                  "https://raw.githubusercontent.com/wyk19/subconverter-web/master/rules/rule-set.ini"
-              },
-            ]
-          },
-          {
-            label: "ACL4SSR",
-            options: [
-              {
-                label: "ACL4SSR默认",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
-              },
-              {
-                label: "ACL4SSR去广告",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
-              },
-              {
-                label: "ACL4SSR无自动测速",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
-              },
-              {
-                label: "ACL4SSR无广告拦截",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
-              },
-              {
-                label: "ACL4SSR精简版",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"
-              },
-              {
-                label: "ACL4SSR精简去广告",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
-              },
-              {
-                label: "ACL4SSR精简多重模式",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Mini_MultiMode.ini"
-              },
-              {
-                label: "ACL4SSR精简版带港美日国家",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiCountry.ini"
-              },
-              {
-                label: "ACL4SSR全分组",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
-              },
-              {
-                label: "ACL4SSR全分组多模式",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"
-              },
-              {
-                label: "ACL4SSR全分组重度用户",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
-              }
-            ]
-          },
-          {
-            label: "特殊",
-            options: [
-              {
-                label: "基础无规则",
-                value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/basic.ini"
-              }
             ]
           }
         ]
@@ -486,7 +360,7 @@ export default {
   },
   created() {
     // document.title = "Subscription Converter";
-    document.title = "つつの订阅转换";
+    document.title = "Sayuri订阅转换";
      this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
