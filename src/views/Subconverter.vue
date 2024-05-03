@@ -370,7 +370,7 @@ export default {
   },
   mounted() {
     this.form.clientType = "clash";
-    this.form.customBackend = "https://api.tsutsu.one/sub?";
+    this.form.customBackend = "https://sub.sayuri.cf/sub?";
     this.form.remoteConfig = "https://cdn.jsdelivr.net/gh/lhl77/sub-ini@main/tsutsu-full.ini";
     //this.getBackendVersion();
   },
